@@ -1,0 +1,460 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Stages>
+  <Stage_1 desc="MASSIVE ROAMERS_1">
+    <Enemy lv="1">
+      <Roamer 	lv.1="100" />
+      <Stone 	lv.1="25" />
+      <Stalker 	lv.1="25" />
+      <Bullet 	lv.1="25" />
+    </Enemy>
+    <Enemy lv="2">
+      <Roamer 	lv.2="80" />
+      <Stone 	lv.2="15"  lv.8="5"/>
+      <Stalker 	lv.2="15" />
+      <Bullet 	lv.2="15" />
+    </Enemy>
+    <Enemy lv="3">
+      <Roamer 	lv.3="60" />
+      <Stone 	lv.3="15" lv.10="5"/>
+      <Stalker 	lv.3="15" />
+      <Bullet 	lv.3="15" />
+    </Enemy>
+    <Ghost Init_Speed="1" Delta_Speed="0.5" Interval="99999" />
+    <Boss lv="3" />
+    <Stage_Size Size="1" />
+    <Difficulty Difficulty="(-17 + 0) * 2.058824 / [1(pow(1.5) = 1)] = -35" />
+  </Stage_1>
+  
+  <Stage_2 desc="MASSIVE ROAMERS_2">
+    <Enemy lv="1">
+      <Roamer 	lv.1="20"	lv.2="10"	lv.3="10"	lv.4="5"	lv.5="3"	lv.6="1"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="2" />
+      <Stone 	lv.1="20"	lv.2="5"	lv.3="0"	lv.4="0"	lv.5="0"	lv.6="0"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="0" />
+      <Stalker 	lv.1="20"	lv.2="2"	lv.3="0"	lv.4="0"	lv.5="0"	lv.6="0"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="0" />
+      <Bullet 	lv.1="20"	lv.2="1"	lv.3="0"	lv.4="0"	lv.5="0"	lv.6="0"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="0" />
+    </Enemy>
+    <Enemy lv="2">
+      <Roamer 	lv.1="0"	lv.2="10"	lv.3="10"	lv.4="5"	lv.5="3"	lv.6="1"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="2" />
+      <Stone 		lv.1="0"	lv.2="10"	lv.3="0"	lv.4="0"	lv.5="0"	lv.6="0"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="0" />
+      <Stalker 	lv.1="0"	lv.2="5"	lv.3="0"	lv.4="0"	lv.5="0"	lv.6="0"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="0" />
+      <Bullet 	lv.1="0"	lv.2="5"	lv.3="0"	lv.4="0"	lv.5="0"	lv.6="0"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="0" />
+    </Enemy>
+    <Enemy lv="3">
+      <Roamer 	lv.1="0"	lv.2="10"	lv.3="10"	lv.4="5"	lv.5="3"	lv.6="1"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="2" />
+      <Stone 		lv.1="0"	lv.2="10"	lv.3="10"	lv.4="0"	lv.5="0"	lv.6="0"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="0" />
+      <Stalker 	lv.1="0"	lv.2="15"	lv.3="15"	lv.4="0"	lv.5="0"	lv.6="0"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="0" />
+      <Bullet 	lv.1="0"	lv.2="15"	lv.3="15"	lv.4="0"	lv.5="0"	lv.6="0"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="0" />
+    </Enemy>
+    <Enemy lv="4">
+      <Roamer 	lv.1="5"	lv.2="5"	lv.3="1"	lv.4="1"	lv.5="11"	lv.6="1"	lv.7="1"	lv.8="1"	lv.9="1"	lv.10="1" />
+      <Stone 		lv.4="15" />
+      <Stalker 	lv.4="13" />
+      <Bullet 	lv.4="13" />
+    </Enemy>
+    <Ghost Init_Speed="0" Delta_Speed="0" Interval="99999" />
+    <Boss lv="4" />
+    <Stage_Size Size="1" />
+    <Difficulty Difficulty="(40 + 0) * 3 / [1(pow(1.5) = 1)] = 120" />
+  </Stage_2>
+	
+  <Stage_3 desc="MASSIVE ROAMERS_3">
+    <Enemy lv="1">
+      <Roamer		lv.1="80"	lv.2="20"	lv.3="15"	lv.4="15"	lv.5="10"	lv.6="5"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="1" />
+      <Stone		lv.1="30"	lv.2="1"	lv.3="0"	lv.4="0"	lv.5="0"	lv.6="0"	lv.7="0" 	lv.8="0" 	lv.9="0"	lv.10="0" />
+      <Stalker	lv.1="20"	lv.2="1"	lv.3="0"	lv.4="0"	lv.5="0"	lv.6="0"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="0" />
+      <Bullet 	lv.1="20"	lv.2="1"	lv.3="0"	lv.4="0"	lv.5="0"	lv.6="0"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="0" />
+    </Enemy>
+    <Enemy lv="2">
+      <Roamer		lv.1="0"	lv.2="40"	lv.3="10"	lv.4="3"	lv.5="3"	lv.6="3"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="1" />
+      <Stone		lv.1="0"	lv.2="10"	lv.3="0"	lv.4="0"	lv.5="0"	lv.6="0"	lv.7="0" 	lv.8="0" 	lv.9="0"	lv.10="0" />
+      <Stalker	lv.1="0"	lv.2="10"	lv.3="1"	lv.4="0"	lv.5="0"	lv.6="0"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="0" />
+      <Bullet 	lv.1="0"	lv.2="10"	lv.3="1"	lv.4="0"	lv.5="0"	lv.6="0"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="0" />
+    </Enemy>
+    <Enemy lv="3">
+      <Roamer		lv.1="0"	lv.2="0"	lv.3="40"	lv.4="3"	lv.5="3"	lv.6="3"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="1" />
+      <Stone		lv.1="0"	lv.2="0"	lv.3="10"	lv.4="0"	lv.5="0"	lv.6="0"	lv.7="0" 	lv.8="0" 	lv.9="0"	lv.10="0" />
+      <Stalker	lv.1="0"	lv.2="0"	lv.3="10"	lv.4="1"	lv.5="0"	lv.6="0"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="0" />
+      <Bullet 	lv.1="0"	lv.2="0"	lv.3="10"	lv.4="1"	lv.5="0"	lv.6="0"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="0" />
+    </Enemy>
+    <Enemy lv="4">
+      <Roamer		lv.1="0"	lv.2="0"	lv.3="0"	lv.4="40"	lv.5="3"	lv.6="3"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="1" />
+      <Stone		lv.1="0"	lv.2="0"	lv.3="0"	lv.4="10"	lv.5="0"	lv.6="0"	lv.7="0" 	lv.8="0" 	lv.9="0"	lv.10="0" />
+      <Stalker	lv.1="0"	lv.2="0"	lv.3="0"	lv.4="10"	lv.5="1"	lv.6="0"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="0" />
+      <Bullet 	lv.1="0"	lv.2="0"	lv.3="0"	lv.4="10"	lv.5="1"	lv.6="0"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="0" />
+    </Enemy>
+    <Enemy lv="5">
+      <Roamer		lv.1="0"	lv.2="0"	lv.3="5"	lv.4="5"	lv.5="10"	lv.6="5"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="1" />
+      <Stone		lv.1="0"	lv.2="0"	lv.3="0"	lv.4="0"	lv.5="10"	lv.6="0"	lv.7="0" 	lv.8="0" 	lv.9="0"	lv.10="0" />
+      <Stalker	lv.1="0"	lv.2="0"	lv.3="0"	lv.4="0"	lv.5="10"	lv.6="0"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="0" />
+      <Bullet 	lv.1="0"	lv.2="0"	lv.3="0"	lv.4="0"	lv.5="10"	lv.6="0"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="0" />
+    </Enemy>
+    <Ghost Init_Speed="1" Delta_Speed="0" Interval="20" />
+    <Boss lv="5" />
+    <Stage_Size Size="1" />
+    <Difficulty Difficulty="(270 + 0) * 3.992593 / [1(pow(1.5) = 1)] = 1078" />
+  </Stage_3>
+	
+  <Stage_4 desc="STONE_MAZE_1">
+    <Enemy lv="1">
+      <Roamer		lv.1="65"	lv.2="0"	lv.3="0"	lv.4="0"	lv.5="0"	lv.6="0"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="0" />
+      <Stone		lv.1="0"	lv.2="0"	lv.3="0"	lv.4="0"	lv.5="0"	lv.6="0"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="50" />
+      <Stalker	lv.1="0"	lv.2="0"	lv.3="0"	lv.4="0"	lv.5="0"	lv.6="0"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="0" />
+      <Bullet		lv.1="0"	lv.2="0"	lv.3="0"	lv.4="0"	lv.5="0"	lv.6="0"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="0" />
+    </Enemy>
+    <Enemy lv="2">
+      <Stone		lv.1="0"	lv.2="0"	lv.3="0"	lv.4="0"	lv.5="0"	lv.6="0"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="10" />
+    </Enemy>
+    <Ghost Init_Speed="1" Delta_Speed="0.5" Interval="30" />
+    <Boss lv="2" />
+    <Stage_Size Size="1" />
+    <Difficulty Difficulty="(363 + 0) * 5.002755 / [1(pow(1.5) = 1)] = 1816" />
+  </Stage_4>
+	
+  <Stage_5 desc="MASSIVE ROAMER_4">
+    <Enemy lv="1">
+	    <Roamer 	lv.1="50"	lv.2="30"	lv.3="10"	lv.4="10"	lv.5="10"	lv.6="10"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="0" />
+      <Stone 		lv.1="40"	lv.2="5"	lv.3="1"	lv.4="1"	lv.5="1"	lv.6="0"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="0" />
+      <Stalker 	lv.1="20"	lv.2="3"	lv.3="0"	lv.4="1"	lv.5="0"	lv.6="1"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="0" />
+      <Bullet 	lv.1="20"	lv.2="3"	lv.3="1"	lv.4="0"	lv.5="0"	lv.6="1"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="0" />
+    </Enemy>
+    <Enemy lv="2">
+      <Roamer 	lv.1="0"	lv.2="3"	lv.3="10"	lv.4="2"	lv.5="2"	lv.6="2"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="0" />
+      <Stone 		lv.1="0"	lv.2="5"	lv.3="0"	lv.4="2"	lv.5="2"	lv.6="0"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="0" />
+      <Stalker 	lv.1="0"	lv.2="3"	lv.3="0"	lv.4="1"	lv.5="0"	lv.6="1"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="0" />
+      <Bullet 	lv.1="0"	lv.2="3"	lv.3="0"	lv.4="0"	lv.5="0"	lv.6="1"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="0" />
+    </Enemy>
+    <Enemy lv="3">
+      <Roamer 	lv.1="0"	lv.2="0"	lv.3="10"	lv.4="4"	lv.5="2"	lv.6="1"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="0" />
+      <Stone 		lv.1="0"	lv.2="0"	lv.3="5"	lv.4="2"	lv.5="2"	lv.6="0"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="0" />
+      <Stalker 	lv.1="0"	lv.2="0"	lv.3="10"	lv.4="1"	lv.5="0"	lv.6="0"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="0" />
+      <Bullet 	lv.1="0"	lv.2="0"	lv.3="3"	lv.4="0"	lv.5="0"	lv.6="0"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="0" />
+    </Enemy>
+    <Enemy lv="4">
+      <Roamer 	lv.1="0"	lv.2="0"	lv.3="0"	lv.4="10"	lv.5="2"	lv.6="1"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="0" />
+      <Stone 		lv.1="0"	lv.2="0"	lv.3="0"	lv.4="5"	lv.5="2"	lv.6="0"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="0" />
+      <Stalker 	lv.1="0"	lv.2="0"	lv.3="0"	lv.4="3"	lv.5="0"	lv.6="0"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="0" />
+      <Bullet 	lv.1="0"	lv.2="0"	lv.3="0"	lv.4="0"	lv.5="0"	lv.6="0"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="0" />
+    </Enemy>
+    <Enemy lv="5">
+      <Roamer 	lv.1="0"	lv.2="0"	lv.3="0"	lv.4="0"	lv.5="5"	lv.6="0"	lv.7="0"	lv.8="10"	lv.9="0"	lv.10="0" />
+      <Stone 		lv.1="0"	lv.2="0"	lv.3="0"	lv.4="0"	lv.5="5"	lv.6="0"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="0" />
+      <Stalker 	lv.1="0"	lv.2="0"	lv.3="0"	lv.4="0"	lv.5="0"	lv.6="0"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="0" />
+      <Bullet 	lv.1="0"	lv.2="0"	lv.3="0"	lv.4="0"	lv.5="0"	lv.6="0"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="0" />
+    </Enemy>
+    <Ghost Init_Speed="1" Delta_Speed="0.5" Interval="20" />
+    <Boss lv="5" />
+    <Stage_Size Size="1" />
+    <Difficulty Difficulty="(363 + 90) * 4 / [1(pow(1.5) = 1)] = 1812" />
+  </Stage_5>
+	
+  <Stage_6 desc="TIME ATTACK_1">
+    <Enemy lv="1">
+      <Roamer		lv.1="50"	lv.2="15"	lv.3="0"	lv.4="0"	lv.5="10"	lv.6="0"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="0" />
+      <Stone		lv.1="50"	lv.2="15"	lv.3="0"	lv.4="0"	lv.5="0"	lv.6="0"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="20" />
+      <Stalker	lv.1="25" lv.2="15"	lv.3="0"	lv.4="0"	lv.5="5"	lv.6="0"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="0" />
+      <Bullet		lv.1="25"	lv.2="0"	lv.3="0"	lv.4="0"	lv.5="0"	lv.6="0"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="0" />
+    </Enemy>
+    <Enemy lv="3">
+      <Roamer		lv.1="0"	lv.2="40"	lv.3="30"	lv.4="10"	lv.5="0"	lv.6="0"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="0" />
+      <Stone		lv.1="0"	lv.2="40"	lv.3="30"	lv.4="0"	lv.5="0"	lv.6="0"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="0" />
+      <Stalker	lv.1="0"  lv.2="40"	lv.3="10"	lv.4="10"	lv.5="5"	lv.6="0"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="0" />
+      <Bullet		lv.1="0"	lv.2="40"	lv.3="10"	lv.4="0"	lv.5="0"	lv.6="0"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="0" />
+    </Enemy>
+    <Enemy lv="5">
+      <Roamer		lv.1="0"	lv.2="40"	lv.3="30"	lv.4="10"	lv.5="10"	lv.6="0"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="0" />
+      <Stone		lv.1="0"	lv.2="40"	lv.3="30"	lv.4="0"	lv.5="10"	lv.6="0"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="0" />
+      <Stalker	lv.1="0"  lv.2="40"	lv.3="10"	lv.4="10"	lv.5="10"	lv.6="0"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="0" />
+      <Bullet		lv.1="0"	lv.2="40"	lv.3="10"	lv.4="0"	lv.5="10"	lv.6="0"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="0" />
+    </Enemy>
+    <Ghost Init_Speed="1" Delta_Speed="0" Interval="2" />
+    <Boss lv="6" />
+    <Stage_Size Size="1" />
+    <Difficulty Difficulty="(82 + 135) * 2.995392 / [1(pow(1.5) = 1)] = 650" />
+  </Stage_6>
+	
+  <Stage_7 desc="MASSIVE BULLET_1">
+    <Enemy lv="1">
+      <Roamer		lv.1="20"	lv.2="15"	lv.3="15"	lv.4="10"	lv.5="10"	lv.6="0"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="0" />
+      <Stone		lv.1="20"	lv.2="15"	lv.3="15"	lv.4="10"	lv.5="10"	lv.6="0"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="0" />
+      <Stalker	lv.1="20" lv.2="0"	lv.3="0"	lv.4="0"	lv.5="0"	lv.6="0"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="0" />
+      <Bullet		lv.1="50"	lv.2="5"	lv.3="3"	lv.4="2"	lv.5="1"	lv.6="0"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="0" />
+    </Enemy>
+    <Enemy lv="3">
+      <Roamer		lv.1="0"	lv.2="0"	lv.3="20"	lv.4="5"	lv.5="0"	lv.6="0"	lv.7="0"	lv.8="0"	lv.9="3"	lv.10="0" />
+      <Stone		lv.1="0"	lv.2="0"	lv.3="20"	lv.4="5"	lv.5="0"	lv.6="0"	lv.7="0"	lv.8="0"	lv.9="3"	lv.10="0" />
+      <Stalker	lv.1="0" 	lv.2="0"	lv.3="20"	lv.4="5"	lv.5="0"	lv.6="0"	lv.7="0"	lv.8="0"	lv.9="3"	lv.10="0" />
+      <Bullet		lv.1="50"	lv.2="50"	lv.3="50"	lv.4="5"	lv.5="0"	lv.6="0"	lv.7="0"	lv.8="0"	lv.9="3"	lv.10="0" />
+    </Enemy>
+    <Enemy lv="5">
+      <Roamer		lv.1="0"	lv.2="0"	lv.3="0"	lv.4="0"	lv.5="5"	lv.6="5"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="3" />
+      <Stone		lv.1="0"	lv.2="0"	lv.3="0"	lv.4="0"	lv.5="5"	lv.6="5"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="3" />
+      <Stalker	lv.1="0" 	lv.2="0"	lv.3="0"	lv.4="0"	lv.5="5"	lv.6="5"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="3" />
+      <Bullet		lv.1="50"	lv.2="50"	lv.3="50"	lv.4="50"	lv.5="50"	lv.6="5"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="3" />
+    </Enemy>
+    <Ghost Init_Speed="1" Delta_Speed="0.5" Interval="20" />
+    <Boss lv="6" />
+    <Stage_Size Size="1" />
+    <Difficulty Difficulty="(830 + 135) * 2.001036 / [1(pow(1.5) = 1)] = 1931" />
+  </Stage_7>
+	
+  <Stage_8 desc="STONE MAZE_2">
+    <Enemy lv="1">
+      <Roamer		lv.1="30"	lv.2="20"	lv.3="20"	lv.4="20"	lv.5="0"	lv.6="0"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="0" />
+      <Stone		lv.1="30"	lv.2="0"	lv.3="0"	lv.4="0"	lv.5="0"	lv.6="0"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="50" />
+      <Stalker	lv.1="20"	lv.2="0"	lv.3="0"	lv.4="0"	lv.5="0"	lv.6="0"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="0" />
+      <Bullet		lv.1="20"	lv.2="0"	lv.3="0"	lv.4="0"	lv.5="0"	lv.6="0"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="0" />
+      <Specter	lv.1="0"	lv.2="10"	lv.3="0"	lv.4="0"	lv.5="0"	lv.6="0"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="0" />
+    </Enemy>
+    <Enemy lv="2">
+      <Roamer		lv.1="0"	lv.2="20"	lv.3="0"	lv.4="0"	lv.5="0"	lv.6="0"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="0" />
+      <Stone		lv.1="0"	lv.2="20"	lv.3="0"	lv.4="0"	lv.5="0"	lv.6="0"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="5" />
+      <Stalker	lv.1="0"	lv.2="0"	lv.3="0"	lv.4="0"	lv.5="0"	lv.6="0"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="0" />
+      <Bullet		lv.1="0"	lv.2="0"	lv.3="0"	lv.4="0"	lv.5="0"	lv.6="0"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="0" />
+      <Specter	lv.1="0"	lv.2="0"	lv.3="10"	lv.4="0"	lv.5="0"	lv.6="0"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="2" />
+    </Enemy>
+    <Enemy lv="3">
+      <Roamer		lv.1="0"	lv.2="0"	lv.3="20"	lv.4="0"	lv.5="0"	lv.6="0"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="0" />
+      <Stone		lv.1="0"	lv.2="0"	lv.3="20"	lv.4="0"	lv.5="0"	lv.6="0"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="5" />
+      <Stalker	lv.1="0"	lv.2="0"	lv.3="0"	lv.4="0"	lv.5="0"	lv.6="0"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="0" />
+      <Bullet		lv.1="0"	lv.2="0"	lv.3="0"	lv.4="0"	lv.5="0"	lv.6="0"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="0" />
+      <Specter	lv.1="0"	lv.2="0"	lv.3="0"	lv.4="10"	lv.5="0"	lv.6="0"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="3" />
+    </Enemy>
+    <Ghost Init_Speed="1" Delta_Speed="0.5" Interval="20" />
+    <Boss lv="4" />
+    <Stage_Size Size="1" />
+    <Difficulty Difficulty="(397 + 135) * 4.996241 / [1(pow(1.5) = 1)] = 2658" />
+  </Stage_8>
+	
+  <Stage_9 desc="MASS_1">
+    <Enemy lv="1">
+      <Roamer		lv.1="50"	lv.2="10"	lv.3="0"	lv.4="0"	lv.5="0"	lv.6="0" lv.7="0" lv.8="0" lv.9="0" lv.10="0" />
+      <Stone		lv.1="40"	lv.2="40"	lv.3="5"	lv.4="0"	lv.5="0"	lv.6="0" lv.7="0" lv.8="0" lv.9="0" lv.10="0" />
+      <Stalker	lv.1="40"	lv.2="10"	lv.3="0"	lv.4="0"	lv.5="0"	lv.6="0" lv.7="0" lv.8="0" lv.9="0" lv.10="0" />
+      <Bullet		lv.1="40"	lv.2="10"	lv.3="0"	lv.4="0" lv.5="0"	lv.6="0" lv.7="0" lv.8="0" lv.9="0" lv.10="0" />
+      <Dancer		lv.1="40"	lv.2="10"	lv.3="0"	lv.4="0" lv.5="0"	lv.6="0" lv.7="0" lv.8="0" lv.9="0" lv.10="0" />
+    </Enemy>
+    <Enemy lv="3">
+      <Roamer		lv.1="0"	lv.2="0"	lv.3="35"	lv.4="10"	lv.5="10"	lv.6="1" lv.7="1" lv.8="0" lv.9="0" lv.10="0" />
+      <Stone		lv.1="0"	lv.2="0"	lv.3="55"	lv.4="10"	lv.5="10"	lv.6="1" lv.7="1" lv.8="0" lv.9="0" lv.10="0" />
+      <Stalker	lv.1="0"	lv.2="0"	lv.3="30"	lv.4="5"	lv.5="1"	lv.6="1" lv.7="1" lv.8="0" lv.9="0" lv.10="0" />
+      <Bullet		lv.1="0"	lv.2="0"	lv.3="30"	lv.4="5"  lv.5="1" 	lv.6="1" lv.7="1" lv.8="0" lv.9="0" lv.10="0" />
+      <Dancer		lv.1="40"	lv.2="10"	lv.3="30"	lv.4="10" lv.5="1"	lv.6="1" lv.7="1" lv.8="0" lv.9="0" lv.10="0" />
+    </Enemy>
+    <Enemy lv="5">
+      <Roamer		lv.1="0"	lv.2="0"	lv.3="35"	lv.4="30"	lv.5="20"	lv.6="3" lv.7="3" lv.8="0" lv.9="3" lv.10="0" />
+      <Stone		lv.1="0"	lv.2="0"	lv.3="35"	lv.4="30"	lv.5="20"	lv.6="20" lv.7="3" lv.8="0" lv.9="3" lv.10="0" />
+      <Stalker	lv.1="0"	lv.2="0"	lv.3="10"	lv.4="10"	lv.5="10"	lv.6="3" lv.7="3" lv.8="0" lv.9="3" lv.10="0" />
+      <Bullet		lv.1="0"	lv.2="0"	lv.3="10"	lv.4="10" lv.5="10"	lv.6="3" lv.7="3" lv.8="0" lv.9="3" lv.10="0" />
+      <Dancer		lv.1="40"	lv.2="10"	lv.3="10"	lv.4="10" lv.5="0"	lv.6="5" lv.7="5" lv.8="5" lv.9="3" lv.10="0" />
+    </Enemy>
+    <Ghost Init_Speed="1" Delta_Speed="0.5" Interval="20" />
+    <Boss lv="7" />
+    <Stage_Size Size="1" />
+    <Difficulty Difficulty="(328 + 135) * 4.99784 / [1(pow(1.5) = 1)] = 2314" />
+  </Stage_9>
+	
+  <Stage_10 desc="MASSIVE BULLET_2">
+    <Enemy lv="1">
+      <Roamer		lv.1="30" 	lv.2="0"	lv.3="0"   lv.4="0" 	lv.5="0"	lv.6="0"  lv.7="1"  lv.8="0" lv.9="0" lv.10="10" />
+      <Stone		lv.1="30" 	lv.2="20"	lv.3="0"  lv.4="0"	lv.5="0"	lv.6="0" lv.7="0"  lv.8="0" lv.9="0" lv.10="10" />
+      <Stalker	lv.1="0" 	  lv.2="0" 	lv.3="0"	 lv.4="0" 	lv.5="0"	lv.6="0"  lv.7="0"  lv.8="0" lv.9="0" lv.10="0" />
+      <Bullet		lv.1="50" 	lv.2="10" lv.3="10"	 lv.4="0"	  lv.5="0"	lv.6="0"  lv.7="0"  lv.8="0" lv.9="0" lv.10="0" />
+      <Specter	lv.1="0"	lv.2="4"	lv.3="0"	lv.4="0"	lv.5="0"	lv.6="0"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="2" />
+    </Enemy>
+    <Enemy lv="3">
+      <Roamer		lv.1="0" 	lv.2="0"	lv.3="30" 	lv.4="0"	lv.5="0"	lv.6="0" lv.7="20" lv.8="0" lv.9="1" lv.10="0" />
+      <Stone		lv.1="0" 	lv.2="0"	lv.3="30" 	lv.4="20"	lv.5="0"	lv.6="0" lv.7="0" lv.8="0" lv.9="0" lv.10="0" />
+      <Stalker	lv.1="0" 	lv.2="0" 	lv.3="0"	lv.4="0"	lv.5="0"	lv.6="0" lv.7="0" lv.8="0" lv.9="0" lv.10="0" />
+      <Bullet		lv.1="0" 	lv.2="0" 	lv.3="50"	lv.4="5"	lv.5="5"	lv.6="0" lv.7="0" lv.8="0" lv.9="0" lv.10="0" />
+    </Enemy>
+    <Enemy lv="5">
+      <Roamer		lv.1="0" 	lv.2="0"	lv.3="0" 	lv.4="0"	lv.5="50"	lv.6="0" lv.7="0" lv.8="0" lv.9="0" lv.10="1" />
+      <Stone		lv.1="0" 	lv.2="0"	lv.3="0" 	lv.4="0"	lv.5="50"	lv.6="20" lv.7="0" lv.8="0" lv.9="0" lv.10="0" />
+      <Stalker	lv.1="0" 	lv.2="0" 	lv.3="0"	lv.4="0"	lv.5="0"	lv.6="0" lv.7="0" lv.8="0" lv.9="0" lv.10="0" />
+      <Bullet		lv.1="0" 	lv.2="0" 	lv.3="0"	lv.4="20"	lv.5="80"	lv.6="5" lv.7="5" lv.8="0" lv.9="0" lv.10="0" />
+    </Enemy>
+    <Ghost Init_Speed="1" Delta_Speed="0.2" Interval="30" />
+    <Boss lv="7" />
+    <Stage_Size Size="1" />
+    <Difficulty Difficulty="(873 + 135) * 5.999008 / [2(pow(1.5) = 3.031433)] = 1995" />
+  </Stage_10>
+	
+  <Stage_11 desc="MASS_2">
+    <Enemy lv="1">
+      <Roamer		lv.1="50"	lv.2="20"	lv.3="10"	lv.4="5"	lv.5="3"	lv.6="1" lv.7="0" lv.8="0" lv.9="0" lv.10="0" />
+      <Stone		lv.1="50" lv.2="20"	lv.3="10"	lv.4="5"	lv.5="3"	lv.6="1" lv.7="0" lv.8="0" lv.9="0" lv.10="0" />
+      <Stalker	lv.1="50" lv.2="20"	lv.3="10"	lv.4="5"	lv.5="3"	lv.6="1" lv.7="0" lv.8="0" lv.9="0" lv.10="0" />
+      <Bullet		lv.1="50"	lv.2="20"	lv.3="10"	lv.4="5"	lv.5="3"	lv.6="1" lv.7="0" lv.8="0" lv.9="0" lv.10="0" />
+      <Dancer		lv.1="50"	lv.2="20"	lv.3="10"	lv.4="5"  lv.5="3"	lv.6="1" lv.7="0" lv.8="0" lv.9="0" lv.10="0" />
+      <Specter	lv.1="50"	lv.2="20"	lv.3="10"	lv.4="5"	lv.5="3"	lv.6="1" lv.7="0"	lv.8="0" lv.9="0"	lv.10="0" />
+    </Enemy>
+    <Enemy lv="3">
+      <Roamer		lv.1="0"	lv.2="50"	lv.3="100"	lv.4="30"	lv.5="10"	lv.6="5" lv.7="3" lv.8="1" lv.9="0" lv.10="0" />
+      <Stone		lv.1="0"  lv.2="0"	lv.3="0"	lv.4="0"	lv.5="0"	lv.6="0" lv.7="0" lv.8="0" lv.9="0" lv.10="0" />
+      <Stalker	lv.1="0"  lv.2="0"	lv.3="0"	lv.4="0"	lv.5="0"	lv.6="0" lv.7="0" lv.8="0" lv.9="0" lv.10="0" />
+      <Bullet		lv.1="0"	lv.2="50"	lv.3="100"	lv.4="30"	lv.5="10"	lv.6="5" lv.7="3" lv.8="1" lv.9="0" lv.10="0" />
+      <Dancer		lv.1="0"	lv.2="0"	lv.3="0"	lv.4="0" lv.5="0"	lv.6="0" lv.7="0" lv.8="0" lv.9="0" lv.10="0" />
+      <Specter	lv.1="0"	lv.2="0"	lv.3="0"	lv.4="0"	lv.5="0"	lv.6="0"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="0" />
+    </Enemy>
+    <Enemy lv="5">
+      <Roamer 	lv.1="0"	lv.2="0"	lv.3="0"	lv.4="0"	lv.5="0"	lv.6="0"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="0" />
+      <Stone		lv.1="0"	lv.2="0"	lv.3="0"	lv.4="50"	lv.5="100"	lv.6="30" lv.7="10" lv.8="3" lv.9="1" lv.10="0" />
+      <Stalker	lv.1="0"  lv.2="0"	lv.3="0"	lv.4="0"	lv.5="0"	lv.6="0" lv.7="0" lv.8="0" lv.9="0" lv.10="0" />
+      <Bullet	  lv.1="0"  lv.2="0"	lv.3="0"	lv.4="0"	lv.5="0"	lv.6="0" lv.7="0" lv.8="0" lv.9="0" lv.10="0" />
+      <Dancer		lv.1="0"	lv.2="0"	lv.3="0"	lv.4="50"	lv.5="100"	lv.6="30" lv.7="10" lv.8="3" lv.9="1" lv.10="0" />
+      <Specter	lv.1="0"	lv.2="0"	lv.3="0"	lv.4="0" lv.5="0"	lv.6="0" lv.7="0" lv.8="0" lv.9="0" lv.10="0" />
+    </Enemy>
+    <Enemy lv="7">
+      <Roamer 	lv.1="0"	lv.2="0"	lv.3="0"	lv.4="0"  lv.5="0"	lv.6="0"  lv.7="0" lv.8="0" lv.9="0" lv.10="0" />
+      <Stone		lv.1="0"	lv.2="0"	lv.3="0"	lv.4="0"	lv.5="0"	lv.6="0"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="0" />
+      <Stalker	lv.1="0"	lv.2="0"	lv.3="0"	lv.4="0"	lv.5="0"	lv.6="50" lv.7="100" lv.8="15" lv.9="0" lv.10="0" />
+      <Bullet		lv.1="0"  lv.2="0"	lv.3="0"	lv.4="0"	lv.5="0"	lv.6="0"  lv.7="0" lv.8="0" lv.9="0" lv.10="0" />
+      <Dancer		lv.1="0"  lv.2="0"	lv.3="0"	lv.4="0"	lv.5="0"	lv.6="0"  lv.7="0" lv.8="0" lv.9="0" lv.10="0" />
+      <Specter	lv.1="0"	lv.2="0"	lv.3="0"	lv.4="0"	lv.5="0"	lv.6="50" lv.7="100" lv.8="15" lv.9="0" lv.10="0" />
+    </Enemy>
+     <Ghost Init_Speed="1" Delta_Speed="0.1" Interval="15" />
+    <Boss lv="8" />
+    <Stage_Size Size="1" />
+    <Difficulty Difficulty="(376 + 68) * 4.995495 / [1(pow(1.5) = 1)] = 2218" />
+  </Stage_11>
+	
+  <Stage_12 desc="STONE MAZE_3">
+    <Enemy lv="1">
+      <Roamer		lv.1="0"	lv.2="0"	lv.3="0"	lv.4="0"	lv.5="0"	lv.6="0"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="0" />
+      <Stone		lv.1="100"	lv.2="0"	lv.3="0"	lv.4="0"	lv.5="0"	lv.6="0"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="120" />
+      <Stalker	lv.1="0"	lv.2="5"	lv.3="5"	lv.4="0"	lv.5="0"	lv.6="0"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="5" />
+      <Bullet		lv.1="0"	lv.2="0"	lv.3="0"	lv.4="0"	lv.5="0"	lv.6="0"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="0" />
+      <Dancer		lv.1="100"	lv.2="0"	lv.3="0"	lv.4="0"  lv.5="0"	lv.6="0" lv.7="0" lv.8="0" lv.9="0" lv.10="0" />
+      <Specter	lv.1="0"	lv.2="5"	lv.3="5"	lv.4="0"	lv.5="0"	lv.6="0" lv.7="0"	lv.8="0" lv.9="0"	lv.10="0" />
+    </Enemy>
+    <Enemy lv="3">
+      <Roamer		lv.1="0"	lv.2="0"	lv.3="0"	lv.4="0"	lv.5="0"	lv.6="0"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="0" />
+      <Stone		lv.1="0"	lv.2="0"	lv.3="100"	lv.4="0"  lv.5="0"	lv.6="0"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="0" />
+      <Stalker	lv.1="0"	lv.2="0"	lv.3="0"	lv.4="5"	lv.5="5"	lv.6="0"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="0" />
+      <Bullet		lv.1="0"	lv.2="0"	lv.3="0"	lv.4="0"	lv.5="0"	lv.6="0"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="0" />
+      <Dancer		lv.1="0"	lv.2="0"	lv.3="100"	lv.4="0"  lv.5="0"	lv.6="0" lv.7="0" lv.8="0" lv.9="0" lv.10="0" />
+      <Specter	lv.1="0"	lv.2="5"	lv.3="5"	lv.4="5"	lv.5="5"	lv.6="0" lv.7="0"	lv.8="0" lv.9="0"	lv.10="0" />
+    </Enemy>
+    <Enemy lv="5">
+      <Roamer		lv.1="0"	lv.2="0"	lv.3="0"	lv.4="0"	lv.5="0"	lv.6="0"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="0" />
+      <Stone		lv.1="0"	lv.2="0"	lv.3="0"	lv.4="0"  lv.5="100"	lv.6="0"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="0" />
+      <Stalker	lv.1="0"	lv.2="0"	lv.3="0"	lv.4="0"	lv.5="0"	lv.6="5"	lv.7="5"	lv.8="0"	lv.9="0"	lv.10="0" />
+      <Bullet		lv.1="0"	lv.2="0"	lv.3="0"	lv.4="0"	lv.5="0"	lv.6="0"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="0" />
+      <Dancer		lv.1="0"	lv.2="0"	lv.3="0"	lv.4="0"  lv.5="100"	lv.6="0" lv.7="0" lv.8="0" lv.9="0" lv.10="0" />
+      <Specter	lv.1="0"	lv.2="5"	lv.3="5"	lv.4="0"	lv.5="0"	lv.6="5" lv.7="5"	lv.8="0" lv.9="0"	lv.10="0" />
+    </Enemy>
+    <Enemy lv="7">
+      <Roamer		lv.1="0"	lv.2="0"	lv.3="0"	lv.4="0"	lv.5="0"	lv.6="0"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="50" />
+      <Stone		lv.1="0"	lv.2="0"	lv.3="0"	lv.4="0"  lv.5="0"	lv.6="0"	lv.7="100"	lv.8="0"	lv.9="0"	lv.10="0" />
+      <Stalker	lv.1="0"	lv.2="0"	lv.3="0"	lv.4="0"	lv.5="0"	lv.6="0"	lv.7="0"	lv.8="5"	lv.9="5"	lv.10="0" />
+      <Bullet		lv.1="0"	lv.2="0"	lv.3="0"	lv.4="0"	lv.5="0"	lv.6="0"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="0" />
+      <Dancer		lv.1="0"	lv.2="0"	lv.3="0"	lv.4="0"  lv.5="0"	lv.6="0" lv.7="100" lv.8="0" lv.9="0" lv.10="0" />
+      <Specter	lv.1="0"	lv.2="5"	lv.3="5"	lv.4="0"	lv.5="0"	lv.6="0" lv.7="0"	lv.8="5" lv.9="5"	lv.10="0" />
+    </Enemy>
+    <Ghost Init_Speed="1" Delta_Speed="0" Interval="30" />
+    <Boss lv="8" />
+    <Stage_Size Size="1.5" />
+    <Difficulty Difficulty="(561 + 90) * 4.996928 / [1(pow(1.5) = 1)] = 3253" />
+  </Stage_12>
+	
+  <Stage_13 desc="MASS_3">
+    <Enemy lv="1">
+      <Roamer		lv.1="50" 	lv.2="30"	lv.3="10"	lv.4="0"	lv.5="0"	lv.6="0"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="3" />
+      <Stone		lv.1="50" 	lv.2="55"	lv.3="15"	lv.4="0"	lv.5="0"	lv.6="0"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="3" />
+      <Stalker	lv.1="50" 	lv.2="20"	lv.3="10"	lv.4="0"	lv.5="0"	lv.6="0"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="3" />
+      <Bullet		lv.1="50" 	lv.2="20"	lv.3="10"	lv.4="0"	lv.5="0"	lv.6="0"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="3" />
+      <Dancer		lv.1="50"	  lv.2="0"	lv.3="0"	lv.4="0"  lv.5="0"	lv.6="0" lv.7="0" lv.8="0" lv.9="0" lv.10="3" />
+      <Specter	lv.1="50"	  lv.2="5"	lv.3="3"	lv.4="0"	lv.5="0"	lv.6="0" lv.7="0"	lv.8="0" lv.9="0"	lv.10="3" />
+    </Enemy>
+    <Enemy lv="3">
+      <Roamer		lv.1="0" 	lv.2="30"	lv.3="20"	lv.4="15"	lv.5="5"	lv.6="0"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="0" />
+      <Stone		lv.1="0" 	lv.2="55"	lv.3="20"	lv.4="15"	lv.5="5"	lv.6="0"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="0" />
+      <Stalker	lv.1="0" 	lv.2="20"	lv.3="15"	lv.4="10"	lv.5="3"	lv.6="0"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="0" />
+      <Bullet		lv.1="0" 	lv.2="20"	lv.3="15"	lv.4="10"	lv.5="3"	lv.6="0"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="0" />
+      <Dancer		lv.1="100"	lv.2="0"	lv.3="0"	lv.4="0"  lv.5="0"	lv.6="0" lv.7="0" lv.8="0" lv.9="0" lv.10="0" />
+      <Specter	lv.1="0"	lv.2="5"	lv.3="5"	lv.4="0"	lv.5="0"	lv.6="0" lv.7="0"	lv.8="0" lv.9="0"	lv.10="0" />
+    </Enemy>
+    <Enemy lv="5">
+      <Roamer		lv.1="0" 	lv.2="0"	lv.3="0"	lv.4="15"	lv.5="20"	lv.6="10"	lv.7="5"	lv.8="0"	lv.9="0"	lv.10="0" />
+      <Stone		lv.1="0" 	lv.2="0"	lv.3="0"	lv.4="15"	lv.5="20"	lv.6="10"	lv.7="5"	lv.8="0"	lv.9="0"	lv.10="0" />
+      <Stalker	lv.1="0" 	lv.2="0"	lv.3="0"	lv.4="20"	lv.5="25"	lv.6="10"	lv.7="5"	lv.8="0"	lv.9="0"	lv.10="0" />
+      <Bullet		lv.1="0" 	lv.2="0"	lv.3="0"	lv.4="20"	lv.5="25"	lv.6="10"	lv.7="5"	lv.8="0"	lv.9="0"	lv.10="0" />
+      <Dancer		lv.1="100"	lv.2="0"	lv.3="0"	lv.4="0"  lv.5="0"	lv.6="0" lv.7="0" lv.8="0" lv.9="0" lv.10="0" />
+      <Specter	lv.1="0"	lv.2="5"	lv.3="5"	lv.4="0"	lv.5="0"	lv.6="0" lv.7="0"	lv.8="0" lv.9="0"	lv.10="0" />
+    </Enemy>
+    <Enemy lv="7">
+      <Roamer		lv.1="0" 	lv.2="0"	lv.3="0"	lv.4="0"	lv.5="0"	lv.6="10"	lv.7="20"	lv.8="10"	lv.9="5"	lv.10="5" />
+      <Stone		lv.1="0" 	lv.2="0"	lv.3="0"	lv.4="0"	lv.5="0"	lv.6="10"	lv.7="20"	lv.8="10"	lv.9="5"	lv.10="5" />
+      <Stalker	lv.1="0" 	lv.2="0"	lv.3="0"	lv.4="0"	lv.5="0"	lv.6="10"	lv.7="20"	lv.8="10"	lv.9="5"	lv.10="5" />
+      <Bullet		lv.1="0" 	lv.2="0"	lv.3="0"	lv.4="0"	lv.5="0"	lv.6="10"	lv.7="20"	lv.8="10"	lv.9="5"	lv.10="5" />
+      <Dancer		lv.1="100"	lv.2="0"	lv.3="0"	lv.4="0"  lv.5="0"	lv.6="0" lv.7="0" lv.8="0" lv.9="0" lv.10="0" />
+      <Specter	lv.1="0"	lv.2="5"	lv.3="5"	lv.4="0"	lv.5="0"	lv.6="0" lv.7="0"	lv.8="0" lv.9="0"	lv.10="0" />
+    </Enemy>
+    <Ghost Init_Speed="1" Delta_Speed="0.1" Interval="20" />
+    <Boss lv="9" />
+    <Stage_Size Size="1" />
+    <Difficulty Difficulty="(647 + 135) * 4.997442 / [1(pow(1.5) = 1)] = 3908" />
+  </Stage_13>
+	
+  <Stage_14 desc="TIME ATTACK_2">
+    <Enemy lv="1">
+      <Roamer		lv.1="60"	lv.2="10"	lv.3="10"	lv.4="0"	lv.5="0"	lv.6="0"	lv.7="10"	lv.8="1"	lv.9="1"	lv.10="3" />
+      <Stone		lv.1="60"	lv.2="10"	lv.3="10"	lv.4="0"	lv.5="0"	lv.6="0"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="5" />
+      <Stalker	lv.1="40"	lv.2="10"	lv.3="10"	lv.4="0"	lv.5="0"	lv.6="0"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="0" />
+      <Bullet		lv.1="30"	lv.2="10"	lv.3="10"	lv.4="0"	lv.5="0"	lv.6="0"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="0" />
+      <Dancer		lv.1="30"	lv.2="10"	lv.3="10"	lv.4="0"  lv.5="0"	lv.6="0" lv.7="0" lv.8="0" lv.9="0" lv.10="0" />
+      <Specter	lv.1="30"	lv.2="5"	lv.3="5"	lv.4="0"	lv.5="0"	lv.6="0" lv.7="0"	lv.8="0" lv.9="0"	lv.10="0" />
+    </Enemy>
+    <Enemy lv="4">
+      <Roamer		lv.1="0"	lv.2="0"	lv.3="20"	lv.4="20"	lv.5="10"	lv.6="10"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="0" />
+      <Stone		lv.1="0"	lv.2="0"	lv.3="20"	lv.4="20"	lv.5="10"	lv.6="10"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="0" />
+      <Stalker	lv.1="0"	lv.2="0"	lv.3="20"	lv.4="20"	lv.5="10"	lv.6="10"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="0" />
+      <Bullet		lv.1="0"	lv.2="0"	lv.3="20"	lv.4="20"	lv.5="10"	lv.6="10"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="0" />
+      <Dancer		lv.1="0"	lv.2="0"	lv.3="20"	lv.4="20" lv.5="10"	lv.6="10" lv.7="0" lv.8="0" lv.9="0" lv.10="0" />
+      <Specter	lv.1="0"	lv.2="0"	lv.3="20"	lv.4="20"	lv.5="5"	lv.6="5" lv.7="0"	lv.8="0" lv.9="0"	lv.10="0" />
+    </Enemy>
+    <Enemy lv="7">
+      <Roamer		lv.1="0"	lv.2="0"	lv.3="0"	lv.4="0"	lv.5="0"	lv.6="20"	lv.7="20"	lv.8="10"	lv.9="0"	lv.10="0" />
+      <Stone		lv.1="0"	lv.2="0"	lv.3="0"	lv.4="0"	lv.5="0"	lv.6="20"	lv.7="20"	lv.8="10"	lv.9="0"	lv.10="0" />
+      <Stalker	lv.1="0"	lv.2="0"	lv.3="0"	lv.4="0"	lv.5="0"	lv.6="20"	lv.7="20"	lv.8="10"	lv.9="0"	lv.10="0" />
+      <Bullet		lv.1="0"	lv.2="0"	lv.3="0"	lv.4="0"	lv.5="0"	lv.6="20"	lv.7="20"	lv.8="10"	lv.9="0"	lv.10="0" />
+      <Dancer		lv.1="0"	lv.2="0"	lv.3="0"	lv.4="0"  lv.5="0"	lv.6="20" lv.7="20" lv.8="10" lv.9="0" lv.10="0" />
+      <Specter	lv.1="0"	lv.2="0"	lv.3="0"	lv.4="0"	lv.5="0"	lv.6="20" lv.7="20"	lv.8="5" lv.9="0"	lv.10="0" />
+    </Enemy>
+    <Ghost Init_Speed="1" Delta_Speed="0" Interval="2" />
+    <Boss lv="9" />
+    <Stage_Size Size="1" />
+    <Difficulty Difficulty="(275 + 270) * 6.99633 / [1(pow(1.5) = 1)] = 3813" />
+  </Stage_14>
+	
+  <Stage_15 desc="MASSIVE_SPECTER">
+    <Enemy lv="1">
+      <Stalker	lv.1="20"	lv.2="10"	lv.3="10"	lv.4="0"	lv.5="0"	lv.6="0"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="0" />
+      <Dancer		lv.1="10"	lv.2="10"	lv.3="10"	lv.4="0"  lv.5="0"	lv.6="0" lv.7="0" lv.8="0" lv.9="0" lv.10="0" />
+      <Specter	lv.1="40"	lv.2="20"	lv.3="10"	lv.4="0"	lv.5="0"	lv.6="0" lv.7="0"	lv.8="0" lv.9="0"	lv.10="3" />
+    </Enemy>
+    <Enemy lv="3">
+      <Stalker	lv.1="0"	lv.2="0"	lv.3="10"	lv.4="10"	lv.5="10"	lv.6="0"	lv.7="0"	lv.8="0"	lv.9="0"	lv.10="0" />
+      <Dancer		lv.1="0"	lv.2="0"	lv.3="0"	lv.4="10" lv.5="10"	lv.6="0" lv.7="0" lv.8="0" lv.9="0" lv.10="0" />
+      <Specter	lv.1="0"	lv.2="0"	lv.3="30"	lv.4="20"	lv.5="10"	lv.6="0" lv.7="0"	lv.8="0" lv.9="0"	lv.10="0" />
+    </Enemy>
+    <Enemy lv="5">
+      <Stalker	lv.1="0"	lv.2="0"	lv.3="0"	lv.4="0"	lv.5="10"	lv.6="10"	lv.7="10"	lv.8="0"	lv.9="0"	lv.10="0" />
+      <Dancer		lv.1="0"	lv.2="0"	lv.3="0"	lv.4="0"  lv.5="0"	lv.6="10" lv.7="10" lv.8="0" lv.9="0" lv.10="0" />
+      <Specter	lv.1="0"	lv.2="0"	lv.3="0"	lv.4="0"	lv.5="30"	lv.6="10" lv.7="10"	lv.8="0" lv.9="0"	lv.10="1" />
+    </Enemy>
+    <Enemy lv="7">
+      <Stalker	lv.1="0"	lv.2="0"	lv.3="0"	lv.4="0"	lv.5="0"	lv.6="0"	lv.7="10"	lv.8="10"	lv.9="10"	lv.10="0" />
+      <Dancer		lv.1="0"	lv.2="0"	lv.3="0"	lv.4="0"  lv.5="0"	lv.6="0" lv.7="0" lv.8="10" lv.9="10" lv.10="0" />
+      <Specter	lv.1="0"	lv.2="0"	lv.3="0"	lv.4="0"	lv.5="0"	lv.6="0" lv.7="30"	lv.8="10" lv.9="10"	lv.10="0" />
+    </Enemy>
+    <Enemy lv="9">
+      <Stalker	lv.1="0"	lv.2="0"	lv.3="0"	lv.4="0"	lv.5="0"	lv.6="0" lv.7="0"	lv.8="0" lv.9="10"	lv.10="0" />
+      <Dancer		lv.1="0"	lv.2="0"	lv.3="0"	lv.4="0"  lv.5="0"	lv.6="0" lv.7="0" lv.8="0" lv.9="0" lv.10="0" />
+      <Specter	lv.1="0"	lv.2="0"	lv.3="0"	lv.4="0"	lv.5="0"	lv.6="0" lv.7="0"	lv.8="0" lv.9="30"	lv.10="1" />
+    </Enemy>
+    <Ghost Init_Speed="1" Delta_Speed="0.05" Interval="10" />
+    <Boss lv="10" />
+    <Stage_Size Size="1" />
+    <Difficulty Difficulty="(1504 + 180) * 6.999406 / [2(pow(1.5) = 3.031433)] = 3888" />
+  </Stage_15>
+</Stages>

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "260061669369",
+    "project_id": "qubeat-c3327",
+    "storage_bucket": "qubeat-c3327.appspot.com",
+    "firebase_url": "https://qubeat-c3327-default-rtdb.firebaseio.com/"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:260061669369:android:7e175688463e6ceb8cff28",
+        "android_client_info": {
+          "package_name": "yde.foodybug.Qubeat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "260061669369-0ogarq6ig4odduijudjscfr772phgjpd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFJos47xWWTys76TY7YG5SjTr6e0akb30"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "260061669369-0ogarq6ig4odduijudjscfr772phgjpd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
