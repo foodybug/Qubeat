@@ -10,8 +10,6 @@ public class YEntityManager : MonoBehaviour {
 	static YEntityManager instance; public static YEntityManager Instance {get{return instance;}}
 	#endregion
 	#region - member -
-	const int ghostSpawnIntervalStage = 10;
-	const float ghostDeltaSpeed = 0.2f;
 	//object by instance id
 	Dictionary<int, YBaseEntity> m_dicEntity = new Dictionary<int, YBaseEntity>();
 	public Dictionary<int, YBaseEntity> dicEntity{get{return m_dicEntity;}}
@@ -239,7 +237,7 @@ public class YEntityManager : MonoBehaviour {
         if (_data == null)
 			return null;
 
-        _data.Proc_RegisteredEntity();
+        //_data.Proc_RegisteredEntity();
         YBaseEntity entity = _data.Create();
 
 		if(entity == null)
@@ -367,24 +365,16 @@ public class YEntityManager : MonoBehaviour {
 	}
     #endregion
     #region - public -
-    public void GenerateEvolEntities(int lv, int allStageClearCount)
+    public void GenerateEvolEntities(int lv)
     {
-        StartCoroutine(_GenerateEvolEntities(new GEE(lv, allStageClearCount)));
+        StartCoroutine(_GenerateEvolEntities(lv));
     }
-	struct GEE
+
+    IEnumerator _GenerateEvolEntities(int lv)
     {
-		public int lv;
-		public int allStageClearCount;
-		public GEE(int lv, int allStageClearCount)
-        {
-			this.lv = lv; this.allStageClearCount = allStageClearCount;
-        }
-	}
-    IEnumerator _GenerateEvolEntities(GEE info)
-    {
-		if (m_dicRegisterEntity.ContainsKey(info.lv))
+		if (m_dicRegisterEntity.ContainsKey(lv))
 		{
-			List<YCreationData> list = m_dicRegisterEntity[info.lv];
+			List<YCreationData> list = m_dicRegisterEntity[lv];
 
 			//int count = 5;
 			//float rate = 0.1f;
@@ -393,22 +383,13 @@ public class YEntityManager : MonoBehaviour {
 				//yield return new WaitForSeconds(rate);
 				yield return null;
 
-				node.pos_ = YStageManager.Instance.GetRandomPlane2DPosInStage_ExceptPlayerPos();
 				CreateEntity(node);
 			}
 
-			Debug.Log("YEntityManager:: _GenerateEvolEntities: lv" + info.lv + " entities count = " + list.Count);
-
-			if(info.lv % ghostSpawnIntervalStage == 0)//°í½ºÆ®
-            {
-				Vector3 pos = YStageManager.Instance.GetRandomPosOuterPlane(0);
-				CreationData_Ghost creation = new CreationData_Ghost(pos, ghostSpawnIntervalStage);
-				creation.SetSpeed(((info.lv + info.allStageClearCount) / (float)ghostSpawnIntervalStage) * ghostDeltaSpeed);
-				CreateEntity(creation);
-			}
+			Debug.Log("YEntityManager:: _GenerateEvolEntities: lv" + lv + " entities count = " + list.Count);
 		}
 		else
-			Debug.LogWarning("YEntityManager:: _GenerateEvolEntities: no level data. lv = " + info.lv);
+			Debug.LogWarning("YEntityManager:: _GenerateEvolEntities: no level data. lv = " + lv);
 	}
 
     public GameObject GetObject()

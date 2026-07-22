@@ -6,7 +6,7 @@ public class StageSetter_Linear : MonoBehaviour
 {
     public static StageSetter_Linear instance;
 
-    public const int stageCount = 100;
+    public const int stageSize = 100;
 
     [SerializeField] Animation animStage;
 
@@ -40,6 +40,8 @@ public class StageSetter_Linear : MonoBehaviour
     //}
     public List<YCreationData> GetStageData(int index)
     {
+        string str = "";
+
         List<YCreationData> list = new List<YCreationData>();
         for(int i=0; i<curveRoamer.Count; ++i)
         {
@@ -47,38 +49,8 @@ public class StageSetter_Linear : MonoBehaviour
             int c = (int)(v * 100f);
             for(int j=0; j<c; ++j)
             {
-                Vector3 pos = YStageManager.Instance.GetRandomPlane2DPosInStage_ExceptPlayerPos();
+                Vector3 pos = Vector3.zero;// YStageManager.Instance.GetRandomPlane2DPosInStage_ExceptPlayerPos();
                 list.Add(new CreationData_Roamer(pos, i + 1));
-            }
-        }
-        for (int i = 0; i < curveStone.Count; ++i)
-        {
-            float v = curveStone[i].Evaluate(index * 0.01f);
-            int c = (int)(v * 100f);
-            for (int j = 0; j < c; ++j)
-            {
-                Vector3 pos = YStageManager.Instance.GetRandomPlane2DPosInStage_ExceptPlayerPos();
-                list.Add(new CreationData_Stone(pos, i + 1));
-            }
-        }
-        for (int i = 0; i < curveStalker.Count; ++i)
-        {
-            float v = curveStalker[i].Evaluate(index * 0.01f);
-            int c = (int)(v * 100f);
-            for (int j = 0; j < c; ++j)
-            {
-                Vector3 pos = YStageManager.Instance.GetRandomPlane2DPosInStage_ExceptPlayerPos();
-                list.Add(new CreationData_Stalker(pos, i + 1));
-            }
-        }
-        for (int i = 0; i < curveBullet.Count; ++i)
-        {
-            float v = curveBullet[i].Evaluate(index * 0.01f);
-            int c = (int)(v * 100f);
-            for (int j = 0; j < c; ++j)
-            {
-                Vector3 pos = YStageManager.Instance.GetRandomPlane2DPosInStage_ExceptPlayerPos();
-                list.Add(new CreationData_Bullet(pos, i + 1));
             }
         }
 

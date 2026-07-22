@@ -68,8 +68,9 @@ public class Roamer : YBaseEntity
 		
 		m_Level = creation.lv_;
 		
-		transform.position = creation.pos_;
-		
+		//transform.position = creation.pos_;
+		transform.position = YStageManager.Instance.GetRandomPlane2DPosInStage_ExceptPlayerPos(80f);
+
 		AdjustVertices(m_Level, 0.25f);
 		
 		SetColor();

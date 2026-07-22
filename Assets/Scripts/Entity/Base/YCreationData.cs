@@ -3,11 +3,8 @@ using System.Collections;
 
 public abstract class YCreationData
 {
-    //public int id_;
     public Vector3 pos_;
 	public int lv_;
-
-    public bool isRegister_ = false;
 
     public YCreationData() { }
 
@@ -16,21 +13,6 @@ public abstract class YCreationData
         //id_ = _id;
         pos_ = _pos;
         lv_ = _lv;
-    }
-
-    public void SetData(Vector3 _pos, int _lv, bool _register = false)
-    {
-        //id_ = _id;
-        pos_ = _pos;
-        lv_ = _lv;
-
-        isRegister_ = _register;
-    }
-
-    public void Proc_RegisteredEntity()
-    {
-        if(isRegister_ == true)
-            pos_ = YStageManager.Instance.GetRandomPlane2DPosInStage_ExceptPlayerPos(80f);
     }
 
     public abstract YBaseEntity Create();

@@ -5,15 +5,13 @@ using System.Collections.Generic;
 public class Player : YBaseEntity
 {
 	public readonly int realLevel = 2;
-	//public int levelUpCount { get; private set;} = 1;
-	//public float adjustLvCycleCompleted { get; private set; } = 1;
-	//int allStageClearCount = 0;
-	float adjustSpawnRatioUnit = 1.2f;
+	public int levelUpCount { get; private set;} = 1;
 
+	const int MAX_LEVEL = 100;
 	//const float sizeRevision = 0.25f;
 
 	const float normalizedSize_Min = 0.5f;
-	const float normalizedSize_Max = 0.9f;// 0.74f;
+	const float normalizedSize_Max = 0.85f;// 0.74f;
 
 	public enum eOperation {Death}
 	
@@ -88,7 +86,6 @@ public class Player : YBaseEntity
 		yield return new WaitForSeconds(standby);
 		
 		SetState(typeof(PlayerState_Idle));
-
 		
 		SetEntityData();
 		
@@ -112,10 +109,8 @@ public class Player : YBaseEntity
 	{
 		m_StateMachine.Update();
 
-#if UNITY_EDITOR
 		if (Input.GetKeyDown(KeyCode.Space) == true)
 			LevelUpProc(true);
-#endif
 	}
 	#endregion
 	
@@ -216,11 +211,6 @@ public class Player : YBaseEntity
 			return;
 
 		//++m_Level;
-
-		SceneSetter.Instance.LevelUp();
-		int levelUpCount = SceneSetter.Instance.curStageIdx;
-		int allStageClearCount = SceneSetter.Instance.allStageClearCount;
-
 		Debug.Log("Level up. cur level count = " + levelUpCount);
 
 		m_Exp = 0;
@@ -228,7 +218,7 @@ public class Player : YBaseEntity
 		HandleMessage(new Msg_CollisionSize(0.22f));
 		HandleMessage(new Msg_Spin_AngleModify());
 		YEntityManager.Instance.DispatchMessageToAll(new Msg_PlayerLevelUp());
-		YEntityManager.Instance.GenerateEvolEntities(++levelUpCount, allStageClearCount);
+		YEntityManager.Instance.GenerateEvolEntities(levelUpCount++);
 		YCameraManager.Instance.PlayerLevelUp();
 		SimplePad.PlayerLevelUp();
 		Particle_BG.Instance.Reset();
@@ -269,7 +259,7 @@ public class Player : YBaseEntity
 
 			transform.localScale = Vector3.one * revision;
 
-			Debug.Log("transform.localScale = " + ", revision = " + revision + ", normal = " + normal);
+			//Debug.Log("transform.localScale = " + ", revision = " + revision + ", normal = " + normal);
 
 			if (Time.timeScale > 1f)
 			{

@@ -52,8 +52,7 @@ public class SceneSetter : MonoBehaviour
 	{get{return instance;}}
 	#endregion
 	#region - member -
-	[SerializeField] int m_CurStageIdx = 1; public int curStageIdx { get { return m_CurStageIdx; } }
-	int _allStageClearCount = 0; public int allStageClearCount { get { return _allStageClearCount; } }
+	[SerializeField] int m_CurStageIdx = 1;
 	[SerializeField] float m_CameraHeight = 10;
 	[SerializeField] bool m_Tutorial = false;
 	
@@ -115,280 +114,270 @@ public class SceneSetter : MonoBehaviour
 			Instantiate(Resources.Load("Misc/TutorialManager"));
 	}
 
-	public void LevelUp()
-    {
-		++m_CurStageIdx;
-
-		if (m_CurStageIdx > 100)
-		{
-			++_allStageClearCount;
-		}
-	}
-
 	#region - loading(obsolete) -
-	void SetScene()
-	{
-		Vector3 pos;
-        m_dicLvCreation.Clear();
-		#region - roamer -
-		for(int i=0; i<10; ++i)
-		{
-			for(int j=0; j<m_RoamerInfo.count_Lv_[i]; ++j)
-			{
-				pos = YStageManager.Instance.GetRandomPlane2DPosInStage_ExceptPlayerPos();
-				CreationData_Roamer roamerCreation = new CreationData_Roamer(pos, i+1);
-				YEntityManager.Instance.CreateEntity(roamerCreation);
-			}
-		}
-		#endregion
-		#region - stone -
-		for(int i=0; i<10; ++i)
-		{
-			for(int j=0; j<m_StoneInfo.count_Lv_[i]; ++j)
-			{
-				pos = YStageManager.Instance.GetRandomPlane2DPosInStage_ExceptPlayerPos();
-				CreationData_Stone stoneCreation = new CreationData_Stone(pos, i+1);
-				YEntityManager.Instance.CreateEntity(stoneCreation);
-			}
-		}
-		#endregion
-		#region - stalker -
-		for(int i=0; i<10; ++i)
-		{
-			for(int j=0; j<m_StalkerInfo.count_Lv_[i]; ++j)
-			{
-				pos = YStageManager.Instance.GetRandomPlane2DPosInStage_ExceptPlayerPos();
-				CreationData_Stalker stalkerCreation = new CreationData_Stalker(pos, i+1);
-				YEntityManager.Instance.CreateEntity(stalkerCreation);
-			}
-		}
-		#endregion
-		#region - bullet -
-		for(int i=0; i<10; ++i)
-		{
-			for(int j=0; j<m_BulletInfo.count_Lv_[i]; ++j)
-			{
-				pos = YStageManager.Instance.GetRandomPlane2DPosInStage_ExceptPlayerPos();
-				CreationData_Bullet bulletCreation = new CreationData_Bullet(pos, i+1);
-				YEntityManager.Instance.CreateEntity(bulletCreation);
-			}
-		}
-        #endregion
-        #region - ghost -
-        YEntityManager.Instance.GenerateGhost(m_GhostInfo.initSpeed_, m_GhostInfo.deltaSpeed_, m_GhostInfo.interval_);
-		#endregion
-		#region - boss -
-		pos = YStageManager.Instance.GetRandomPlane2DPosInStage_ExceptPlayerPos();
-		CreationData_Boss BossCreation = new CreationData_Boss(pos, m_BossLv);
-		Boss boss = YEntityManager.Instance.CreateEntity(BossCreation) as Boss;
-		YEntityManager.Instance.SetBossEntity(boss);
-		#endregion
-	}
+	//void SetScene()
+	//{
+	//	Vector3 pos;
+ //       m_dicLvCreation.Clear();
+	//	#region - roamer -
+	//	for(int i=0; i<10; ++i)
+	//	{
+	//		for(int j=0; j<m_RoamerInfo.count_Lv_[i]; ++j)
+	//		{
+	//			pos = YStageManager.Instance.GetRandomPlane2DPosInStage_ExceptPlayerPos();
+	//			CreationData_Roamer roamerCreation = new CreationData_Roamer(pos, i+1);
+	//			YEntityManager.Instance.CreateEntity(roamerCreation);
+	//		}
+	//	}
+	//	#endregion
+	//	#region - stone -
+	//	for(int i=0; i<10; ++i)
+	//	{
+	//		for(int j=0; j<m_StoneInfo.count_Lv_[i]; ++j)
+	//		{
+	//			pos = YStageManager.Instance.GetRandomPlane2DPosInStage_ExceptPlayerPos();
+	//			CreationData_Stone stoneCreation = new CreationData_Stone(pos, i+1);
+	//			YEntityManager.Instance.CreateEntity(stoneCreation);
+	//		}
+	//	}
+	//	#endregion
+	//	#region - stalker -
+	//	for(int i=0; i<10; ++i)
+	//	{
+	//		for(int j=0; j<m_StalkerInfo.count_Lv_[i]; ++j)
+	//		{
+	//			pos = YStageManager.Instance.GetRandomPlane2DPosInStage_ExceptPlayerPos();
+	//			CreationData_Stalker stalkerCreation = new CreationData_Stalker(pos, i+1);
+	//			YEntityManager.Instance.CreateEntity(stalkerCreation);
+	//		}
+	//	}
+	//	#endregion
+	//	#region - bullet -
+	//	for(int i=0; i<10; ++i)
+	//	{
+	//		for(int j=0; j<m_BulletInfo.count_Lv_[i]; ++j)
+	//		{
+	//			pos = YStageManager.Instance.GetRandomPlane2DPosInStage_ExceptPlayerPos();
+	//			CreationData_Bullet bulletCreation = new CreationData_Bullet(pos, i+1);
+	//			YEntityManager.Instance.CreateEntity(bulletCreation);
+	//		}
+	//	}
+ //       #endregion
+ //       #region - ghost -
+ //       YEntityManager.Instance.GenerateGhost(m_GhostInfo.initSpeed_, m_GhostInfo.deltaSpeed_, m_GhostInfo.interval_);
+	//	#endregion
+	//	#region - boss -
+	//	pos = YStageManager.Instance.GetRandomPlane2DPosInStage_ExceptPlayerPos();
+	//	CreationData_Boss BossCreation = new CreationData_Boss(pos, m_BossLv);
+	//	Boss boss = YEntityManager.Instance.CreateEntity(BossCreation) as Boss;
+	//	YEntityManager.Instance.SetBossEntity(boss);
+	//	#endregion
+	//}
     #endregion
     #region - loading by xml -
-    void SetSceneFromTable()
-	{
-		#region - load -
-		XmlDocument xmlDoc = new XmlDocument();
+//    void SetSceneFromTable()
+//	{
+//		#region - load -
+//		XmlDocument xmlDoc = new XmlDocument();
 		
-		TextAsset textAsset = Resources.Load("Asset/StageInfo") as TextAsset;
-		MemoryStream stream = new MemoryStream(Encoding.UTF8.GetBytes(textAsset.text));
-		StreamReader srr = new StreamReader(stream);
-		StringReader sr = new StringReader(srr.ReadToEnd());
-		string str = sr.ReadToEnd();
+//		TextAsset textAsset = Resources.Load("Asset/StageInfo") as TextAsset;
+//		MemoryStream stream = new MemoryStream(Encoding.UTF8.GetBytes(textAsset.text));
+//		StreamReader srr = new StreamReader(stream);
+//		StringReader sr = new StringReader(srr.ReadToEnd());
+//		string str = sr.ReadToEnd();
 		
-		xmlDoc.LoadXml(str);
-		XmlElement root = xmlDoc.DocumentElement;
-		XmlNodeList list = root.GetElementsByTagName("Stage_" + m_CurStageIdx);
-//		Debug.Log("SceneSetter::SetSceneFromTable: m_CurStageIdx = " + m_CurStageIdx);
+//		xmlDoc.LoadXml(str);
+//		XmlElement root = xmlDoc.DocumentElement;
+//		XmlNodeList list = root.GetElementsByTagName("Stage_" + m_CurStageIdx);
+////		Debug.Log("SceneSetter::SetSceneFromTable: m_CurStageIdx = " + m_CurStageIdx);
 		
-		XmlElement stage = null;
-		foreach(XmlNode node in list)
-		{
-			if(stage != null) Debug.LogError("SceneSetter::SetSceneFromTable: same named stage record = " + "Stage_" + m_CurStageIdx);
-			stage = node as XmlElement;
-		}
-		#endregion
-		#region - stage size -
-		XmlElement stageSize = null;
-		list = stage.GetElementsByTagName("Stage_Size");
-		foreach(XmlNode node in list)
-		{
-			if(stageSize != null) Debug.LogError("SceneSetter::SetSceneFromTable: same named stage record = StageSize");
-			stageSize = node as XmlElement;
-		}
+//		XmlElement stage = null;
+//		foreach(XmlNode node in list)
+//		{
+//			if(stage != null) Debug.LogError("SceneSetter::SetSceneFromTable: same named stage record = " + "Stage_" + m_CurStageIdx);
+//			stage = node as XmlElement;
+//		}
+//		#endregion
+//		#region - stage size -
+//		XmlElement stageSize = null;
+//		list = stage.GetElementsByTagName("Stage_Size");
+//		foreach(XmlNode node in list)
+//		{
+//			if(stageSize != null) Debug.LogError("SceneSetter::SetSceneFromTable: same named stage record = StageSize");
+//			stageSize = node as XmlElement;
+//		}
 		
-		float size = float.Parse(stageSize.GetAttribute("Size"));
-		YStageManager.Instance.SetStageInfo(size);
-        #endregion
-        #region - enemies -
-        m_dicLvCreation.Clear();
-        entityCnt = 0;
+//		float size = float.Parse(stageSize.GetAttribute("Size"));
+//		YStageManager.Instance.SetStageInfo(size);
+//        #endregion
+//        #region - enemies -
+//        m_dicLvCreation.Clear();
+//        entityCnt = 0;
 
-        list = stage.GetElementsByTagName("Enemy");
-        foreach (XmlNode node in list)
-        {
-            XmlElement element = node as XmlElement;
-            if (element.GetAttribute("lv") == "1")
-            {
-                CreateEnemies<CreationData_Roamer>(GetElement(element, "Roamer"));
-                CreateEnemies<CreationData_Stone>(GetElement(element, "Stone"));
-                CreateEnemies<CreationData_Stalker>(GetElement(element, "Stalker"));
-                CreateEnemies<CreationData_Bullet>(GetElement(element, "Bullet"));
-                //CreateEnemies<CreationData_Dancer>(GetElement(element, "Dancer"), 0);
-                //CreateEnemies<CreationData_Specter>(GetElement(element, "Specter"), 0);
+//        list = stage.GetElementsByTagName("Enemy");
+//        foreach (XmlNode node in list)
+//        {
+//            XmlElement element = node as XmlElement;
+//            if (element.GetAttribute("lv") == "1")
+//            {
+//                CreateEnemies<CreationData_Roamer>(GetElement(element, "Roamer"));
+//                CreateEnemies<CreationData_Stone>(GetElement(element, "Stone"));
+//                CreateEnemies<CreationData_Stalker>(GetElement(element, "Stalker"));
+//                CreateEnemies<CreationData_Bullet>(GetElement(element, "Bullet"));
+//                //CreateEnemies<CreationData_Dancer>(GetElement(element, "Dancer"), 0);
+//                //CreateEnemies<CreationData_Specter>(GetElement(element, "Specter"), 0);
 
-                Debug.Log("SceneSetter:: SetSceneFromTable: entity count = " + entityCnt);
-            }
-            else
-            {
-                int evolLv = int.Parse(element.GetAttribute("lv"));
-                List<YCreationData> listCreation = new List<YCreationData>();
+//                Debug.Log("SceneSetter:: SetSceneFromTable: entity count = " + entityCnt);
+//            }
+//            else
+//            {
+//                int evolLv = int.Parse(element.GetAttribute("lv"));
+//                List<YCreationData> listCreation = new List<YCreationData>();
 
-                _AddToCreationList(ref listCreation, GetCreationData<CreationData_Roamer>(GetElement(element, "Roamer")));
-                _AddToCreationList(ref listCreation, GetCreationData<CreationData_Stone>(GetElement(element, "Stone")));
-                _AddToCreationList(ref listCreation, GetCreationData<CreationData_Stalker>(GetElement(element, "Stalker")));
-                _AddToCreationList(ref listCreation, GetCreationData<CreationData_Bullet>(GetElement(element, "Bullet")));
-                //_AddToCreationList(ref listCreation, GetCreationData<CreationData_Dancer>(GetElement(element, "Dancer"), 0));
-                //_AddToCreationList(ref listCreation, GetCreationData<CreationData_Specter>(GetElement(element, "Specter"), 0));
+//                _AddToCreationList(ref listCreation, GetCreationData<CreationData_Roamer>(GetElement(element, "Roamer")));
+//                _AddToCreationList(ref listCreation, GetCreationData<CreationData_Stone>(GetElement(element, "Stone")));
+//                _AddToCreationList(ref listCreation, GetCreationData<CreationData_Stalker>(GetElement(element, "Stalker")));
+//                _AddToCreationList(ref listCreation, GetCreationData<CreationData_Bullet>(GetElement(element, "Bullet")));
+//                //_AddToCreationList(ref listCreation, GetCreationData<CreationData_Dancer>(GetElement(element, "Dancer"), 0));
+//                //_AddToCreationList(ref listCreation, GetCreationData<CreationData_Specter>(GetElement(element, "Specter"), 0));
 
-                m_dicLvCreation.Add(evolLv, listCreation);
-            }
-        }
+//                m_dicLvCreation.Add(evolLv, listCreation);
+//            }
+//        }
 
-        YEntityManager.Instance.RegisterEvolEntities(m_dicLvCreation);
-        #endregion
-        #region - ghost & boss -
-        //ghost
-        XmlElement ghost = null;
-		list = stage.GetElementsByTagName("Ghost");
-		foreach(XmlNode node in list)
-		{
-			if(ghost != null) Debug.LogError("SceneSetter::SetSceneFromTable: same named stage record = Ghost");
-			ghost = node as XmlElement;
-		}
+//        YEntityManager.Instance.RegisterEvolEntities(m_dicLvCreation);
+//        #endregion
+//        #region - ghost & boss -
+//        //ghost
+//        XmlElement ghost = null;
+//		list = stage.GetElementsByTagName("Ghost");
+//		foreach(XmlNode node in list)
+//		{
+//			if(ghost != null) Debug.LogError("SceneSetter::SetSceneFromTable: same named stage record = Ghost");
+//			ghost = node as XmlElement;
+//		}
 		
-		float initSpeed = float.Parse(ghost.GetAttribute("Init_Speed"));
-		float deltaSpeed = float.Parse(ghost.GetAttribute("Delta_Speed"));
-		float interval = float.Parse(ghost.GetAttribute("Interval"));
+//		float initSpeed = float.Parse(ghost.GetAttribute("Init_Speed"));
+//		float deltaSpeed = float.Parse(ghost.GetAttribute("Delta_Speed"));
+//		float interval = float.Parse(ghost.GetAttribute("Interval"));
 
-        YEntityManager.Instance.GenerateGhost(initSpeed, deltaSpeed, interval);
+//        YEntityManager.Instance.GenerateGhost(initSpeed, deltaSpeed, interval);
 
-        //boss
-        XmlElement boss = null;
-		list = stage.GetElementsByTagName("Boss");
-		foreach(XmlNode node in list)
-		{
-			if(boss != null) Debug.LogError("SceneSetter::SetSceneFromTable: same named stage record = Ghost");
-			boss = node as XmlElement;
-		}
+//        //boss
+//        XmlElement boss = null;
+//		list = stage.GetElementsByTagName("Boss");
+//		foreach(XmlNode node in list)
+//		{
+//			if(boss != null) Debug.LogError("SceneSetter::SetSceneFromTable: same named stage record = Ghost");
+//			boss = node as XmlElement;
+//		}
 		
-		int lv = int.Parse(boss.GetAttribute("lv"));
+//		int lv = int.Parse(boss.GetAttribute("lv"));
 
-        Vector3 pos = YStageManager.Instance.GetRandomPlane2DPosInStage_ExceptPlayerPos();
-		CreationData_Boss BossCreation = new CreationData_Boss(pos, lv);
-		Boss bossEntity = YEntityManager.Instance.CreateEntity(BossCreation) as Boss;
-		YEntityManager.Instance.SetBossEntity(bossEntity);
-        #endregion
-        #region - additional entity -
-        //XmlElement addition = null;
-        //list = stage.GetElementsByTagName("Addition");
-        //foreach (XmlNode node in list)
-        //{
-        //    if (addition != null) Debug.LogError("SceneSetter::SetSceneFromTable: same named stage record = Roamer");
-        //    addition = node as XmlElement;
-        //}
+//        Vector3 pos = YStageManager.Instance.GetRandomPlane2DPosInStage_ExceptPlayerPos();
+//		CreationData_Boss BossCreation = new CreationData_Boss(pos, lv);
+//		Boss bossEntity = YEntityManager.Instance.CreateEntity(BossCreation) as Boss;
+//		YEntityManager.Instance.SetBossEntity(bossEntity);
+//        #endregion
+//        #region - additional entity -
+//        //XmlElement addition = null;
+//        //list = stage.GetElementsByTagName("Addition");
+//        //foreach (XmlNode node in list)
+//        //{
+//        //    if (addition != null) Debug.LogError("SceneSetter::SetSceneFromTable: same named stage record = Roamer");
+//        //    addition = node as XmlElement;
+//        //}
 
-        //for (int i = 1; i <= 10; ++i)
-        //{
-        //    int count = int.Parse(roamer.GetAttribute("lv." + i));
-        //    for (int j = 0; j < count; ++j)
-        //    {
-        //        pos = YStageManager.Instance.GetRandomPlane2DPosInStage_ExceptPlayerPos();
-        //        CreationData_Roamer roamerCreation = new CreationData_Roamer(0, pos, i);
-        //        YEntityManager.Instance.CreateEntity(roamerCreation);
+//        //for (int i = 1; i <= 10; ++i)
+//        //{
+//        //    int count = int.Parse(roamer.GetAttribute("lv." + i));
+//        //    for (int j = 0; j < count; ++j)
+//        //    {
+//        //        pos = YStageManager.Instance.GetRandomPlane2DPosInStage_ExceptPlayerPos();
+//        //        CreationData_Roamer roamerCreation = new CreationData_Roamer(0, pos, i);
+//        //        YEntityManager.Instance.CreateEntity(roamerCreation);
 
-        //        ++entityCnt;
-        //    }
-        //}
-        #endregion
-    }
+//        //        ++entityCnt;
+//        //    }
+//        //}
+//        #endregion
+//    }
 
-    XmlElement GetElement(XmlElement parent, string str)
-    {
-        XmlElement ret = null;
-        XmlNodeList list = parent.GetElementsByTagName(str);
-        foreach (XmlNode node in list)
-        {
-            if (ret != null) Debug.LogError("SceneSetter:: GetElement: same named stage record = " + str);
-            ret = node as XmlElement;
-        }
+    //XmlElement GetElement(XmlElement parent, string str)
+    //{
+    //    XmlElement ret = null;
+    //    XmlNodeList list = parent.GetElementsByTagName(str);
+    //    foreach (XmlNode node in list)
+    //    {
+    //        if (ret != null) Debug.LogError("SceneSetter:: GetElement: same named stage record = " + str);
+    //        ret = node as XmlElement;
+    //    }
 
-        //if (ret == null)
-        //    Debug.LogWarning("SceneSetter:: GetElement: [" + str + "] XmlElement is not found");
+    //    //if (ret == null)
+    //    //    Debug.LogWarning("SceneSetter:: GetElement: [" + str + "] XmlElement is not found");
 
-        return ret;
-    }
+    //    return ret;
+    //}
 
-    void CreateEnemies<T>(XmlElement element) where T : YCreationData, new()
-    {
-        if (element == null)
-            return;
+    //void CreateEnemies<T>(XmlElement element) where T : YCreationData, new()
+    //{
+    //    if (element == null)
+    //        return;
 
-        for (int i = minLv; i <= maxLv; ++i)
-        {
-            string strCount = element.GetAttribute("lv." + i);
-            int count = 0;
-            if (int.TryParse(strCount, out count) == true)
-            {
-                for (int j = 0; j < count; ++j)
-                {
-                    Vector3 pos = YStageManager.Instance.GetRandomPlane2DPosInStage_ExceptPlayerPos();
-                    T creation = new T();
-                    creation.SetData(pos, i);
-                    YEntityManager.Instance.CreateEntity(creation);
+    //    for (int i = minLv; i <= maxLv; ++i)
+    //    {
+    //        string strCount = element.GetAttribute("lv." + i);
+    //        int count = 0;
+    //        if (int.TryParse(strCount, out count) == true)
+    //        {
+    //            for (int j = 0; j < count; ++j)
+    //            {
+    //                Vector3 pos = YStageManager.Instance.GetRandomPlane2DPosInStage_ExceptPlayerPos();
+    //                T creation = new T();
+    //                creation.SetData(pos, i);
+    //                YEntityManager.Instance.CreateEntity(creation);
 
-                    ++entityCnt;
-                }
-            }
-        }
-    }
+    //                ++entityCnt;
+    //            }
+    //        }
+    //    }
+    //}
 
-    List<YCreationData> GetCreationData<T>(XmlElement element) where T : YCreationData, new()
-    {
-        if (element == null)
-        {
-            //Debug.LogWarning("SceneSetter:: GetCreationData: element is null");
-            return null;
-        }
+    //List<YCreationData> GetCreationData<T>(XmlElement element) where T : YCreationData, new()
+    //{
+    //    if (element == null)
+    //    {
+    //        //Debug.LogWarning("SceneSetter:: GetCreationData: element is null");
+    //        return null;
+    //    }
 
-        List<YCreationData> listCreation = new List<YCreationData>();
+    //    List<YCreationData> listCreation = new List<YCreationData>();
 
-        for (int i = minLv; i <= maxLv; ++i)
-        {
-            string strCount = element.GetAttribute("lv." + i);
-            int count = 0;
-            if (int.TryParse(strCount, out count) == true)
-            {
-                for (int j = 0; j < count; ++j)
-                {
-                    Vector3 pos = Vector3.zero;
-                    T creation = new T();
-                    creation.SetData(pos, i, true);
+    //    for (int i = minLv; i <= maxLv; ++i)
+    //    {
+    //        string strCount = element.GetAttribute("lv." + i);
+    //        int count = 0;
+    //        if (int.TryParse(strCount, out count) == true)
+    //        {
+    //            for (int j = 0; j < count; ++j)
+    //            {
+    //                Vector3 pos = Vector3.zero;
+    //                T creation = new T();
+    //                creation.SetData(pos, i, true);
 
-                    listCreation.Add(creation);
-                }
-            }
-        }
+    //                listCreation.Add(creation);
+    //            }
+    //        }
+    //    }
 
-        return listCreation;
-    }
+    //    return listCreation;
+    //}
 
-    void _AddToCreationList(ref List<YCreationData>  listCreation, List<YCreationData> list)
-    {
-        if(list != null)
-           listCreation.AddRange(list);
-    }
+    //void _AddToCreationList(ref List<YCreationData>  listCreation, List<YCreationData> list)
+    //{
+    //    if(list != null)
+    //       listCreation.AddRange(list);
+    //}
     #endregion
     #region - loading by curve -
     void SetSceneByCurve()
@@ -398,17 +387,17 @@ public class SceneSetter : MonoBehaviour
         entityCnt = 0;
 
         StageSetter_Linear ssl = StageSetter_Linear.instance;
-        List<YCreationData> listInitStage = ssl.GetStageData(m_CurStageIdx);
+        List<YCreationData> listInitStage = ssl.GetStageData(0);
         foreach (YCreationData node in listInitStage)
             YEntityManager.Instance.CreateEntity(node);
 
-        for (int i = 1; i < StageSetter_Linear.stageCount; ++i)
+        for (int i = 1; i < StageSetter_Linear.stageSize; ++i)
         {
             List<YCreationData> list = ssl.GetStageData(i);
             m_dicLvCreation.Add(i, list);
         }
 
-        YEntityManager.Instance.RegisterEvolEntities(m_dicLvCreation);
+        YEntityManager.Instance.RegisterEvolEntities(m_dicLvCreation);//스테이지 별로 미리 등록
     }
 
     //IEnumerator SetSceneByCurve()
