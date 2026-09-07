@@ -18,24 +18,28 @@ public class Developer_Mark : MonoBehaviour
 
         logo_.SetActive(true);
 
+        float animTime = waitTime_InputEnable_ * 0.5f;
+
         Hashtable hash = new Hashtable();
         hash.Add("y", 0.0f);
-        hash.Add("time", waitTime_InputEnable_ * 0.5f);
+        hash.Add("time", animTime);
         hash.Add("ignoretimescale", true);
         hash.Add("looptype", iTween.LoopType.none);
         hash.Add("easetype", iTween.EaseType.easeInElastic);
         iTween.ScaleTo(logo_, hash);
 
+        yield return new WaitForSeconds(animTime);
+        logo_.SetActive(false);
+
         hash.Clear();
         hash.Add("y", 1.0f);
-        hash.Add("delay", waitTime_InputEnable_ * 0.5f);
-        hash.Add("time", waitTime_InputEnable_ * 0.5f);
+        hash.Add("time", animTime);
         hash.Add("ignoretimescale", true);
         hash.Add("looptype", iTween.LoopType.none);
-        hash.Add("easetype", iTween.EaseType.easeInExpo);
+        hash.Add("easetype", iTween.EaseType.easeOutElastic);
         iTween.ScaleTo(retroLogo_, hash);
 
-        yield return new WaitForSeconds(waitTime_InputEnable_);
+        yield return new WaitForSeconds(animTime);
 
         MainFlow.Instance.SceneConversion("Title");
 	}

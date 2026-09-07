@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -14,6 +14,7 @@ public class StageSetter_Linear : MonoBehaviour
     [SerializeField] List<AnimationCurve> curveStone = new List<AnimationCurve>();
     [SerializeField] List<AnimationCurve> curveStalker = new List<AnimationCurve>();
     [SerializeField] List<AnimationCurve> curveBullet = new List<AnimationCurve>();
+    [SerializeField] List<AnimationCurve> curveSpecter = new List<AnimationCurve>();
 
     private void Awake()
     {
@@ -40,18 +41,73 @@ public class StageSetter_Linear : MonoBehaviour
     //}
     public List<YCreationData> GetStageData(int index)
     {
-        string str = "";
-
         List<YCreationData> list = new List<YCreationData>();
+
+        // Roamer
         for(int i=0; i<curveRoamer.Count; ++i)
         {
             float v = curveRoamer[i].Evaluate(index * 0.01f);
             int c = (int)(v * 100f);
             for(int j=0; j<c; ++j)
             {
-                Vector3 pos = Vector3.zero;// YStageManager.Instance.GetRandomPlane2DPosInStage_ExceptPlayerPos();
+                Vector3 pos = Vector3.zero;
                 list.Add(new CreationData_Roamer(pos, i + 1));
             }
+        }
+
+        // Stone
+        for (int i = 0; i < curveStone.Count; ++i)
+        {
+            float v = curveStone[i].Evaluate(index * 0.01f);
+            int c = (int)(v * 100f);
+            for (int j = 0; j < c; ++j)
+            {
+                Vector3 pos = Vector3.zero;
+                list.Add(new CreationData_Stone(pos, i + 1));
+            }
+        }
+
+        // Stalker
+        for (int i = 0; i < curveStalker.Count; ++i)
+        {
+            float v = curveStalker[i].Evaluate(index * 0.01f);
+            int c = (int)(v * 100f);
+            for (int j = 0; j < c; ++j)
+            {
+                Vector3 pos = Vector3.zero;
+                list.Add(new CreationData_Stalker(pos, i + 1));
+            }
+        }
+
+        // Bullet
+        for (int i = 0; i < curveBullet.Count; ++i)
+        {
+            float v = curveBullet[i].Evaluate(index * 0.01f);
+            int c = (int)(v * 100f);
+            for (int j = 0; j < c; ++j)
+            {
+                Vector3 pos = Vector3.zero;
+                list.Add(new CreationData_Bullet(pos, i + 1));
+            }
+        }
+
+        // Specter
+        for (int i = 0; i < curveSpecter.Count; ++i)
+        {
+            float v = curveSpecter[i].Evaluate(index * 0.01f);
+            int c = (int)(v * 100f);
+            for (int j = 0; j < c; ++j)
+            {
+                Vector3 pos = Vector3.zero;
+                list.Add(new CreationData_Specter(pos, i + 1));
+            }
+        }
+
+        // Ghost (index가 10의 배수일 때 생성)
+        if (index > 0 && index % 10 == 0)
+        {
+            Vector3 pos = Vector3.zero;
+            list.Add(new CreationData_Ghost(pos, 1));
         }
 
         return list;

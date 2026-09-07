@@ -201,31 +201,37 @@ public class CreationData_Bullet : YCreationData
 //    }
 //}
 
-//public class CreationData_Specter : YCreationData
-//{
-//    public CreationData_Specter() { }
+public class CreationData_Specter : YCreationData
+{
+    static GameObject rootObj;
 
-//    public CreationData_Specter(Vector3 _pos, int _lv)
-//        : base(_id, _pos, _lv)
-//    {
-//    }
+    public CreationData_Specter() { }
 
-//    public override YBaseEntity Create()
-//    {
-//        GameObject obj = YEntityManager.Instance.GetCachedObject();
-//        if (obj == null)
-//            return null;
+    public CreationData_Specter(Vector3 _pos, int _lv)
+        : base(_pos, _lv)
+    {
+    }
 
-//        obj.SetActive(true);
+    public override YBaseEntity Create()
+    {
+        GameObject obj = YEntityManager.Instance.GetCachedObject();
+        if (obj == null)
+            return null;
 
-//        Specter entity = obj.AddComponent<Specter>();
-//        entity.Init();
-//        entity.SetCreationData(this);
-//        entity.Init_AfterCreation();
+        obj.SetActive(true);
 
-//        return entity;
-//    }
-//}
+        Specter entity = obj.AddComponent<Specter>();
+        entity.Init();
+        entity.SetCreationData(this);
+        entity.Init_AfterCreation();
+
+        if (rootObj == null)
+            rootObj = new GameObject("ROOT_Specter");
+        entity.transform.SetParent(rootObj.transform);
+
+        return entity;
+    }
+}
 
 public class CreationData_Boss : YCreationData
 {
